@@ -1,0 +1,17 @@
+﻿@using Scraper.Data
+
+@model IEnumerable<Article>
+
+
+    @foreach(Article a in Model)
+    {
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 well">
+                <h2>@a.Title</h2>
+                <img src="@a.Image" style="width: 150px;" />
+                <h4>@a.Text</h4>
+                <a target="_blank" href="@a.Url">Click to read full article</a>
+            </div>
+        </div>
+            
+    }
